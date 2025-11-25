@@ -11,6 +11,10 @@ router.route('/:id')
 
 router.route('/')
 .get(productController.getAll)
+
+router.route('/create')
 .post(productController.create)
+
+
 
 export default router;
