@@ -57,7 +57,7 @@ const controller = {
         if (!result){
             return res.status(400).json({message: `Email não encontrado`});
         }else{
-            const user = result.toObject();
+            const user = result?.toObject();
             if (!user){
             return res.status(400).json({message: `Usuário não encontrado`});
             }
