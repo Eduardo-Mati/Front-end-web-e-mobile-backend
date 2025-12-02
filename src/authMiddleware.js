@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 
 const mid = (req, res, next) => {
     //Verifica se a rota tem autenticação liberada
-    const noAuthRoutes = ['/api/user/login', '/api/user/register', '/api/product', '/api/product/create'];
+    const noAuthRoutes = ['/api/user/login', '/api/user/register'];
     if (noAuthRoutes.includes(req.path)){
         return next();
     }else{

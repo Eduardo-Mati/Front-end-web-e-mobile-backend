@@ -30,6 +30,7 @@ const controller = {
         const result = await productModel.find({}, {__v: false});
         res.status(200).json(result);
     },
+    
     create: async function(req,res){
         const result = await productModel.create(req.body);
         const {__v, ...json} = result.toObject();

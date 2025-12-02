@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema({
     inStock: {type: Boolean, required: true},
     quantity:{type: Number, default: 0, required: true},
     validity: {type: Date, required: true},
-    manufacturingDate: {type: Date, required: true},
+    manufacturingDate: {type: Date, required: false},
 })
 
 const Product = mongoose.model('Product', productSchema);
